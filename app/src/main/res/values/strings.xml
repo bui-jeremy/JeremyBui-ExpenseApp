@@ -3,4 +3,15 @@
     <string name="amount_hint">Amount</string>
     <string name="save">Save</string>
     <string name="date">Date</string>
+    <string name="add_expense">Add Expense</string>
+    <string name="personal_expense_tracker">Personal Expense Tracker</string>
+    <string-array name="expense_categories">
+        <item>Food</item>
+        <item>Entertainment</item>
+        <item>Housing</item>
+        <item>Utilities</item>
+        <item>Fuel</item>
+        <item>Automotive</item>
+        <item>Misc</item>
+    </string-array>
 </resources>

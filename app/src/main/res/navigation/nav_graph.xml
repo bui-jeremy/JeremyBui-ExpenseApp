@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/expensesListFragment">
+
+    <fragment
+        android:id="@+id/expensesListFragment"
+        android:name="com.bignerdranch.android.jeremybui_expenseapp.ExpensesListFragment"
+        android:label="Expenses List">
+        <action
+            android:id="@+id/action_expensesListFragment_to_addEditExpenseFragment"
+            app:destination="@id/addEditExpenseFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addEditExpenseFragment"
+        android:name="com.bignerdranch.android.jeremybui_expenseapp.AddEditExpenseFragment"
+        android:label="fragment_add_edit_expense"
+        tools:layout="@layout/fragment_add_edit_expense" >
+        <argument
+            android:name="expenseId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+
+</navigation>
