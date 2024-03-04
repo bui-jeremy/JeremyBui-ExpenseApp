@@ -20,10 +20,68 @@
 
         <Button
             android:id="@+id/btnAddExpense"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/add_expense"
             app:layout_constraintTop_toBottomOf="@id/tvPersonalExpenseTracker"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnCategorized"
+            app:layout_constraintWidth_default="wrap"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/btnCategorized"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/grouped_view"
+            app:layout_constraintTop_toBottomOf="@id/tvPersonalExpenseTracker"
+            app:layout_constraintStart_toEndOf="@id/btnAddExpense"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_default="wrap"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"/>
+
+        <EditText
+            android:id="@+id/etDateFilter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/filter_by_date_dd_mm_yyyy"
+            app:layout_constraintTop_toBottomOf="@id/btnCategorized"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnFilter"
+            app:layout_constraintWidth_default="wrap"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:inputType="date"/>
+
+        <Button
+            android:id="@+id/btnFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/filter_by_date_"
+            app:layout_constraintBottom_toBottomOf="@id/etDateFilter"
+            app:layout_constraintEnd_toStartOf="@id/btnReset"
+            app:layout_constraintStart_toEndOf="@id/etDateFilter"
+            app:layout_constraintTop_toTopOf="@id/etDateFilter"
+            android:layout_marginStart="8dp" />
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reset"
+            app:layout_constraintTop_toTopOf="@id/btnFilter"
+            app:layout_constraintStart_toEndOf="@id/btnFilter"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerCategoryFilter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/etDateFilter"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="8dp"/>
@@ -32,12 +90,11 @@
             android:id="@+id/expensesRecyclerView"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            app:layout_constraintTop_toBottomOf="@id/btnAddExpense"
+            app:layout_constraintTop_toBottomOf="@id/spinnerCategoryFilter"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             tools:listitem="@layout/item_expense"
             android:layout_marginTop="16dp"/>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

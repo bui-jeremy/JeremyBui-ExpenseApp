@@ -12,9 +12,12 @@ class ExpenseRepository(private val expenseDao: ExpenseDao) {
     suspend fun update(expense: Expense) {
         expenseDao.update(expense)
     }
+    fun getExpensesByCategory(category: String): LiveData<List<Expense>> {
+        return expenseDao.getExpensesByCategory(category)
+    }
 
-    suspend fun delete(expense: Expense) {
-        expenseDao.delete(expense)
+    fun getExpensesByDate(date: String): LiveData<List<Expense>> {
+        return expenseDao.getExpensesByDate(date)
     }
 
     fun getExpenseById(id: Int): LiveData<Expense> {

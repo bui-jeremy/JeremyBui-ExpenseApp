@@ -11,6 +11,9 @@
         <action
             android:id="@+id/action_expensesListFragment_to_addEditExpenseFragment"
             app:destination="@id/addEditExpenseFragment" />
+        <action
+            android:id="@+id/action_expensesListFragment_to_expenseCategoryFragment"
+            app:destination="@id/expenseCategoryFragment" />
     </fragment>
 
     <fragment
@@ -23,5 +26,12 @@
             app:argType="integer"
             android:defaultValue="-1" />
     </fragment>
+
+    <fragment
+        android:id="@+id/expenseCategoryFragment"
+        android:name="com.bignerdranch.android.jeremybui_expenseapp.ExpenseCategoryFragment"
+        android:label="Categorized Expenses"
+        tools:layout="@layout/fragment_expense_category" />
+
 
 </navigation>

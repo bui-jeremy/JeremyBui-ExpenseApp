@@ -23,6 +23,7 @@ class ExpensesAdapter(private val onItemClicked: (Expense) -> Unit) :
         holder.bind(currentExpense)
     }
 
+    // view for recycler
     class ExpenseViewHolder(private val binding: ItemExpenseBinding, private val onItemClicked: (Expense) -> Unit) : RecyclerView.ViewHolder(binding.root) {
         fun bind(expense: Expense) {
             binding.apply {
@@ -36,6 +37,7 @@ class ExpensesAdapter(private val onItemClicked: (Expense) -> Unit) :
         }
     }
 
+    // used for when we try to click on item view
     companion object {
         private val DiffCallback = object : DiffUtil.ItemCallback<Expense>() {
             override fun areItemsTheSame(oldItem: Expense, newItem: Expense): Boolean = oldItem.id == newItem.id
