@@ -86,7 +86,7 @@ class ExpensesListFragment : Fragment() {
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
-=            }
+            }
         }
     }
     // filter expenses based on date
