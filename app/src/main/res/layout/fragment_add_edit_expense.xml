@@ -6,15 +6,27 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <TextView
+            android:id="@+id/tvPersonalExpenseTracker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/personal_expense_tracker"
+            android:textSize="24sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
         <EditText
             android:id="@+id/editTextDate"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="@string/date"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPersonalExpenseTracker"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="16dp"/>
+            android:layout_marginTop="32dp"/>
 
         <EditText
             android:id="@+id/editTextAmount"
@@ -37,14 +49,25 @@
             android:layout_marginTop="8dp"/>
 
         <Button
+            android:id="@+id/backButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/back"
+            app:layout_constraintTop_toBottomOf="@id/categorySpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/saveExpenseButton"
+            app:layout_constraintWidth_percent="0.5"/>
+
+        <Button
             android:id="@+id/saveExpenseButton"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/save"
             app:layout_constraintTop_toBottomOf="@id/categorySpinner"
+            app:layout_constraintStart_toEndOf="@+id/backButton"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="16dp"/>
+            app:layout_constraintWidth_percent="0.5"/>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -48,6 +48,11 @@ class AddEditExpenseFragment : Fragment() {
                 saveExpense()
             }
         }
+
+        binding.backButton.setOnClickListener {
+            findNavController().navigateUp()
+        }
+
     }
 
     // load existing data into addeditexpensefragment

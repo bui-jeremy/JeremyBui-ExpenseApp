@@ -5,6 +5,7 @@
     <string name="date">Date</string>
     <string name="add_expense">Add Expense</string>
     <string name="personal_expense_tracker">Personal Expense Tracker</string>
+    <string name="back">Back</string>
     <string-array name="expense_categories">
         <item>Food</item>
         <item>Entertainment</item>
